@@ -18,7 +18,7 @@ TARGET_KERNEL_CONFIG := sirius_defconfig
 TARGET_OTA_ASSERT_DEVICE := sirius
 
 # HIDL
-# DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -32,8 +32,5 @@ TARGET_TAP_TO_WAKE_NODE := "/dev/input/event3"
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
-# Inherit from the proprietary stuffs
--include vendor/xiaomi/sirius/BoardConfigVendor.mk
-
-# Sepolicy
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+# Inherit from the proprietary version
+-include vendor/xiaomi/dipper/BoardConfigVendor.mk
