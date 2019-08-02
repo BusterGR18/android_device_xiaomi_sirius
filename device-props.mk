@@ -5,9 +5,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.sat.fallback.luxindex=405 \
     persist.camera.sat.fallback.lux.d=20
 
-# Display density
+# Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=440
+    ro.sf.lcd_density=440 \
+		ro.display.type=oled
 
 # Display features
 PRODUCT_PROPERTY_OVERRIDES += \
