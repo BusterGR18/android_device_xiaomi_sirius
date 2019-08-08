@@ -14,3 +14,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.displayfeature.histogram.enable=true \
     ro.eyecare.brightness.threshold=3 \
     ro.eyecare.brightness.level=8
+
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+		media.settings.xml=/system/etc/media_profiles_vendor.xml
